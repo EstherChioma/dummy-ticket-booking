@@ -1,0 +1,31 @@
+{
+  "buyTicket": "body.home.page-template-default.page.page-id-10.theme-ark.woocommerce-js.yith-wcstripe.appear-animate:nth-child(2) div.ffb-id-navigation-header.wrapper.ff-boxed-wrapper.animsition.animsition-ended:nth-child(1) header.ark-header.ark-cart-classic.ark-cart-left-side-xs.header-no-pills.header.header-fixed.header-has-topbar.fg-text-dark.ffb-header-design nav.navbar.mega-menu.fg-text-dark.ffb-header-design-inner div.fg-container.container.fg-container-large div.collapse.navbar-collapse.nav-collapse div.menu-container ul.nav.navbar-nav.navbar-nav-left li.menu-item.menu-item-type-post_type.menu-item-object-page.nav-item.menu-item-574:nth-child(2) > a.nav-item-child.ffb-ark-first-level-menu",
+  "firstName": "#travname",
+  "lastName": "#travlastname",
+  "orderNotes": "#order_comments",
+  "dob": " #dob",
+  "calender":".ui-state-default.ui-state-hover",
+  "sex": "label[for='sex_2']",
+  "tripType":"label[for='traveltype_1']",
+  "fromCity":"#fromcity",
+  "toCity":"#tocity",
+  "departure":"#departon",
+  "deptCalender":"#departon",
+  "notes": "#notes",
+  "visaApplication": "#select2-reasondummy-container",
+  "selectVisaApplication" : "Visa application",
+  "deliveryMethod": "#deliverymethod_1",
+  "billName": "#billname",
+  "billNumber":"#billing_phone",
+  "billEmail":"#billing_email",
+  "billingCountry" :"#select2-billing_country-container",
+  "UK":"United Kingdom (UK)",
+  "billingAddress": "#billing_address_1",
+  "billingCity":"#billing_city",
+  "billingState": "#billing_state",
+  "billingPostcode": "#billing_postcode",
+  "currency":"div[class='wmc-currency wmc-active'] span:nth-child(1)"
+  
+
+
+}
