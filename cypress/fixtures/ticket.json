@@ -24,7 +24,9 @@
   "billingCity":"#billing_city",
   "billingState": "#billing_state",
   "billingPostcode": "#billing_postcode",
-  "currency":"div[class='wmc-currency wmc-active'] span:nth-child(1)"
+  "currency":"div[class='wmc-currency wmc-active'] span:nth-child(1)",
+  "card": "input[placeholder='MM / YY']"
+  
   
 
 

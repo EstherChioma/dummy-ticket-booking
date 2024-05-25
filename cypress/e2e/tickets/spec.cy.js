@@ -32,16 +32,26 @@ describe('booking process', () => {
     cy.get(data.billName).should('be.visible').and('exist').type('Esther')
     cy.get(data.billNumber).should('be.visible').and('exist').type('Test@1234')
     cy.get(data.billEmail).should('be.visible').and('exist').type(faker.internet.email())
-    //cy.get('#select2-billing_country-container').click()
     cy.get(data.billingCountry).click()
     cy.contains(data.UK).click({force:true})
     cy.get(data.billingAddress).should('be.visible').and('exist').type('38 Harcourt Street')
     cy.get(data.billingCity).should('be.visible').and('exist').type('Luton')
     cy.get(data.billingState).should('be.visible').and('exist').type('Bedfordshire')
     cy.get(data.billingPostcode).should('be.visible').and('exist').type('Lu12ef')
-    cy.get('div[class="wmc-currency wmc-active"] span:nth-child(1)').click(
-    //cy.get('input[placeholder="•••• •••• •••• ••••"]').click()
-    )
+    cy.get('div[class="wmc-currency wmc-active"] span:nth-child(1)').click()
+    cy.contains('Debit and Credit Card').click({force:true})
+    // cy.get(data.card).should('be.visible').and('exist').type('81719999')
+    // cy.get(data.card).should('be.visible').and('exist').type('10/30')
+    // cy.get(data.card).should('be.visible').and('exist').type('737')
+    
+    // cy.get(data.card).then(function($iframe)
+    // {
+    // let iframebody = $iframe.contents().find('body').cy.wrap(iframebody).clear().type('81719999')
+    // cy.get(data.card).should('be.visible').and('exist').type('10/30')
+    // cy.get(data.card).should('be.visible').and('exist').type('737)
+
+
+    
     
 
    
