@@ -23,3 +23,18 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("isiFramePaymentLoaded", { prevSubject: "element" }, (iframe) => {
+    const win = iframe.prop("contentWindow");
+    return new Promise((resolve) => {
+      if (win && win.document.readyState === "complete") {
+        resolve(win.document.body);
+      } else {
+        iframe.on("load", () => {
+          resolve(win.document.body);
+        });
+      }
+    });
+  });
+
+  

@@ -15,6 +15,7 @@
   "visaApplication": "#select2-reasondummy-container",
   "selectVisaApplication" : "Visa application",
   "deliveryMethod": "#deliverymethod_1",
+  "phoneNumber" : "#billing_phone",
   "billName": "#billname",
   "billNumber":"#billing_phone",
   "billEmail":"#billing_email",

@@ -31,6 +31,7 @@ describe('booking process', () => {
     cy.get(data.deliveryMethod).click()
     cy.get(data.billName).should('be.visible').and('exist').type('Esther')
     cy.get(data.billNumber).should('be.visible').and('exist').type('Test@1234')
+    cy.get(data.phoneNumber).should('be.visible').and('exist').type(faker.phone.number('+23491########'))
     cy.get(data.billEmail).should('be.visible').and('exist').type(faker.internet.email())
     cy.get(data.billingCountry).click()
     cy.contains(data.UK).click({force:true})
@@ -40,24 +41,19 @@ describe('booking process', () => {
     cy.get(data.billingPostcode).should('be.visible').and('exist').type('Lu12ef')
     cy.get('div[class="wmc-currency wmc-active"] span:nth-child(1)').click()
     cy.contains('Debit and Credit Card').click({force:true})
-    // cy.get(data.card).should('be.visible').and('exist').type('81719999')
-    // cy.get(data.card).should('be.visible').and('exist').type('10/30')
-    // cy.get(data.card).should('be.visible').and('exist').type('737')
     
-    // cy.get(data.card).then(function($iframe)
-    // {
-    // let iframebody = $iframe.contents().find('body').cy.wrap(iframebody).clear().type('81719999')
-    // cy.get(data.card).should('be.visible').and('exist').type('10/30')
-    // cy.get(data.card).should('be.visible').and('exist').type('737)
-
-
-    
-    
-
+  
+    cy.get ('iframe[title="Secure card number input frame"]').should('exist').isiFramePaymentLoaded().click({force:true})
+    .find('input[name="cardnumber"]').should('exist').type('5127 8809 9999 9990')
    
+    cy.get ('iframe[title="Secure expiration date input frame"]').should('exist').isiFramePaymentLoaded().click({force:true})
+    .find('input[id="yith-stripe-card-expiry"]').should('exist').type('	03/2030')
+   
+    //cy.get ('iframe[title="Secure expiration date input frame"]').should('exist').isiFramePaymentLoaded().click({force:true})
+    //.find('input[id="yith-stripe-card-expiry"]').should('exist').type('	03/2030')
   })
-
 
 
 })
 //})
+
